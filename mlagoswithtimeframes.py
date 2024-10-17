@@ -3,7 +3,7 @@ from ortools.constraint_solver import pywrapcp
 import numpy as np
 import random
 from sklearn.tree import DecisionTreeRegressor
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import root_mean_squared_error
 import time  # Import time module for measuring execution time
 
 def create_data_model():
@@ -92,7 +92,7 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_train)
 
 # Calculate and print the Mean Squared Error (MSE) for the training data
-mse = mean_squared_error(y_train, y_pred)
+mse = root_mean_squared_error(y_train, y_pred)
 print(f"Mean Squared Error (MSE) on Training Data: {mse:.4f}")
 
 # Initialize pheromone levels
