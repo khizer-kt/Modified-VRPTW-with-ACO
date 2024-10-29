@@ -23,15 +23,15 @@ def generate_time_windows(num_nodes, max_time=20):
     return time_windows
 
 # Example usage
-num_nodes = 50  # Specify the desired number of nodes
+num_nodes = 100  # Specify the desired number of nodes
 distance_matrix = generate_distance_matrix(num_nodes)
 time_windows = generate_time_windows(num_nodes)
 
 # Display the generated matrices
 print("Distance Matrix:")
 for row in distance_matrix:
-    print(row)
+    print(row,",")
 
 print("\nTime Windows:")
 for tw in time_windows:
-    print(tw)
+    print(tw,",")
